@@ -1,0 +1,268 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.logo{
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+body {
+    background-color: #DAD7CD;
+}
+
+a {
+    text-decoration: none;
+    color: #344E41;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#DAD7CD, #344E41);
+    background-size: cover;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    height: auto;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 2em;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+    padding: 1em 0;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    padding: 0 1em;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #344E41;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+/* Search Bar */
+#searchBar {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.search-form i{
+    position: absolute;
+}
+
+#searchBar input[type=text] {
+    padding: 1em;
+    border-radius: 50px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid #344E41;
+    position: relative;
+    z-index: 888;
+}
+
+#searchBar input[type=submit] {
+    background-color: goldenrod;
+    font-weight: bolder;
+    padding: 1em;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Main Section */
+main {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#cat-filtering {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+#cat-filtering ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+    padding: 1em 1em;
+    flex-wrap: wrap;
+    background: #00003a;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#cat-filtering ul li {
+    padding: 0 1.5em;
+    border: 1px solid #344E41;
+    border-radius: 50px;
+    background-color: #344E41;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#cat-filtering ul li a {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+/* Events Cards Layout */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    width: calc((100% / 3) - 20px); /* Ensures 3 cards per row */
+    max-width: 300px; /* Prevents cards from getting too wide */
+    background-color: #344E41;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.event-card img {
+    gap: 1em;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #344E41;
+    color: white;
+    padding: 2em 0;
+    margin-top: 2em; 
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensures it's on top of other content */
+    
+
+}
+
+footer p {
+    padding: 0 1em;
+}
+
+/* 🔹 Responsive Adjustments */
+
+/* Tablets (2 columns for event cards, adjusted nav & search) */
+@media (max-width: 1024px) {
+    header {
+        padding: 1em;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    #searchBar {
+        padding: 20px 0;
+    }
+
+    #searchBar input[type=text] {
+        width: 80%;
+    }
+
+    .event-card {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    #searchBar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #searchBar input[type=text] {
+        width: 90%;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+}
